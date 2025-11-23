@@ -1,0 +1,136 @@
+/* style.css (Tema Terang: Putih dan Biru Laut) */
+
+/* --- Reset dan Styling Dasar --- */
+body {
+  font-family: "Quicksand", sans-serif;
+    background-color: #f4f7f9; /* Latar belakang sangat terang (abu-abu muda sekali) */
+    color: #333; /* Warna teks gelap */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Wrapper Utama --- */
+.wrapper {
+    background-color: #ffffff; /* Warna kartu/konten putih bersih */
+    padding: 30px;
+    border-radius: 12px;
+    /* Bayangan lembut khas desain modern */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08), 
+                0 0 0 1px rgba(0, 0, 0, 0.05); /* Garis luar sangat halus */
+    width: 90%;
+    max-width: 650px;
+    margin: 40px auto 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efek Hover (sedikit mengangkat) */
+.wrapper:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Judul Halaman --- */
+h1 {
+    color: #007bff; /* Warna Biru Laut (Primary Blue) */
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.4em;
+    font-weight: 600;
+}
+
+/* --- Form Input --- */
+.form-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+/* Input Teks */
+#input-prompt {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #ccc; /* Border abu-abu terang */
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Latar belakang input sedikit beda dari wrapper */
+    color: #333;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#input-prompt::placeholder {
+    color: #888;
+}
+
+#input-prompt:focus {
+    border-color: #007bff; /* Border menyala Biru Laut saat fokus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+    background-color: #fff;
+}
+
+/* Tombol Generate */
+.form-input button {
+    padding: 12px 20px;
+    background-color: #007bff; /* Warna Biru Laut dominan */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.form-input button:hover {
+    background-color: #0056b3; /* Biru sedikit lebih gelap saat hover */
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+.form-input button:active {
+    transform: scale(0.98);
+}
+
+/* --- Area Hasil (Output) --- */
+.hasil {
+    min-height: 100px;
+    padding: 20px;
+    background-color: #e9ecef; /* Area hasil berwarna abu-abu sangat terang */
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* Efek cekungan halus */
+    line-height: 1.6;
+    color: #333;
+}
+
+/* --- Footer --- */
+footer {
+    margin-top: auto;
+    padding: 15px;
+    font-size: 0.85em;
+    color: #6c757d; /* Warna teks abu-abu lembut */
+    text-align: center;
+    border-top: 1px solid #e9ecef;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+/* --- Responsif Sederhana --- */
+@media (max-width: 600px) {
+    .wrapper {
+        margin: 20px auto;
+        padding: 20px;
+    }
+    
+    .form-input {
+        flex-direction: column;
+    }
+
+    .form-input button {
+        width: 100%;
+    }
+}
